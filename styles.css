@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Eczar:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+main {
+    font-size: 3rem;
+    max-width: 40rem;
+}
+
+#words {
+  font-family: Eczar, sans-serif;
+  text-align: center;
+  color: red;
+}
+
+#words2 {
+    font-family: Eczar, sans-serif;
+    line-height: 1.1;
+  }
+
+#words3 {
+    font-family: Eczar, sans-serif;
+    text-align: right;
+}

@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <meta
       name="description"
       content="The website of Grant Chodek."
@@ -14,15 +13,147 @@
     />
     <meta name="msvalidate.01" content="84FAD0980CD289AC9AAC0F74824B70B2" />
     <title>GRANT CHODEK | WEBSITE</title>
+    <style>
+        body {
+            background: #dcdcdc;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #name {
+            text-align: right;
+        }
+        .container {
+            max-width: 720px;
+            width: 100%;
+            background: #fff;
+            padding: 20px;
+            border: 3px solid #000;
+            box-shadow: 3px 3px 0 #000;
+        }
+        h1 {
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+            background: #000;
+            color: #fff;
+            margin: -20px -20px 20px;
+            text-transform: uppercase;
+        }
+        .section1 {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        .section1 img {
+            width: 130px;
+            height: 170px;
+            object-fit: cover;
+            border: 2px solid #000;
+            margin-right: 15px;
+        }
+        .section1 .info {
+            flex: 1;
+            line-height: 1.5;
+        }
+        .section2 {
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px dashed #000;
+            background: #fafafa;
+        }
+        .section2 p {
+            margin: 5px 0;
+        }
+        .section3 {
+            text-align: center;
+            padding: 12px;
+            border-top: 3px solid #000;
+        }
+        .clearance {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-size: 10px;
+            color: #ff0000;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        @media (max-width: 520px) {
+            .section1 {
+                flex-direction: column;
+                text-align: center;
+            }
+            .section1 img {
+                margin: 0 auto 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <main>      
-      <p id="words2">i don't use social media. if you really need to get in touch with me, send an email to the address listed below:</p>
-      <p id="words">contact@chode.xyz</p>
-      <p id="words2">please include your name and the reason for your email. don't expect a response if both of these conditions are not met.
-      </p>
-      <p id="words3">grant</p>
-    </main>
-    
+    <div class="container">
+        <h1>/// GRANT CHODEK \\\</h1>
+
+        <div class="section1">
+            <img src="picture.png" alt="picture">
+            <div class="info">
+                <p>PERSONAL STATEMENT: I don't use social media. If you *need* to get in touch with me, send an email to the address listed below. Please include your name and the reason for your email ─ Don't expect a response if both of these conditions are not met. </p>
+                <P id="name">- Grant</P>
+            </div>
+        </div>
+
+        <div class="section2">
+            <p>AGE: <span id="age">26</span></p>
+            <p>LOCATION: ████████, USA 🇺🇸</p>
+            <p>OCCUPATION: ████████</p>
+            <p>EMPLOYER: ████████</p>
+            <p>EDUCATION: ████████</p>
+            <p>MARITAL STATUS: ████████</p>
+            <p>INTERESTS: ████████, ████████, ████████</p>
+            <p>HOBBIES: ████████, ████████, ████████, ████████</p>
+            <p>ZODIAC SIGN: ████████</p>
+            <p>PERSONALITY TYPE: ████████</p>
+            <p>MOTHER'S MAIDEN NAME: ████████</p>
+            <p>FATHER'S MIDDLE NAME: ████████</p>
+            <P>BIRTH CITY: ████████</P>
+            <p>NAME OF FIRST PET: ████████</p>
+            <P>HIGH SCHOOL MASCOT: ████████</P>
+            <P>CHILDHOOD HOME STREET ADDRESS: ████████</P>
+            <p>BANK ROUTING AND ACCOUNT NUMBERS: ████████, ████████</p>
+            <p>SOCIAL SECURITY NUMBER: ███-██-████</p>
+        </div>
+
+        <div class="section2">
+            <p>VERY IMPORTANT INFORMATION: <a href="link.html" style="color: #ff0000">CLICK HERE</a></p>
+        </div>
+
+        <div class="section3">
+            <p>EMAIL ADDRESS: CONTACT@CHODE.XYZ</p>
+        </div>
+    </div>
+
+    <script>
+        function updateAge() {
+            const birthday = new Date('1998-07-27'); 
+            const today = new Date();
+            let age = today.getFullYear() - birthday.getFullYear();
+            const monthDiff = today.getMonth() - birthday.getMonth();
+            const dayDiff = today.getDate() - birthday.getDate();
+
+            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+                age--;
+            }
+
+            document.getElementById('age').textContent = age;
+        }
+
+        updateAge();
+        setInterval(updateAge, 86400000); 
+    </script>
 </body>
 </html>

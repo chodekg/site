@@ -3,37 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-      name="description"
-      content="The website of Grant Chodek."
-    />
-    <meta
-      name="keywords"
-      content="grant chodek, grantchodek, grantchodek.com, grant chodek website, grant chodek's website, chodek, grantchodek, grant"
-    />
+
+    <meta name="description" content="The website of Grant Chodek." />
+    <meta name="keywords" content="grant chodek, grantchodek, grantchodek.com, grant chodek website, grant chodek's website, chodek, grantchodek, grant" />
     <meta name="msvalidate.01" content="84FAD0980CD289AC9AAC0F74824B70B2" />
+
     <title>GRANT CHODEK | WEBSITE</title>
     <style>
         body {
-            background: #dcdcdc;
-            font-family: 'Courier New', Courier, monospace;
             margin: 0;
-            padding: 25px;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            overflow: hidden;
+            background: #000;
         }
-        #name {
-            text-align: right;
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 1;
         }
+        #name { text-align: right; }
         .container {
             max-width: 720px;
             width: 100%;
+            margin: 20px;
             background: #fff;
             padding: 20px;
             border: 3px solid #000;
             box-shadow: 3px 3px 0 #000;
+            opacity: 0.90;
+            position: relative;
+            z-index: 1;
         }
         h1 {
             text-align: center;
@@ -67,22 +75,63 @@
             border: 1px dashed #000;
             background: #fafafa;
         }
-        .section2 p {
-            margin: 5px 0;
-        }
+        .section2 p { margin: 5px 0; }
         .section3 {
             text-align: center;
             padding: 12px;
             border-top: 3px solid #000;
         }
-        .clearance {
+        .neon-text {
             position: absolute;
-            bottom: 5px;
-            right: 5px;
-            font-size: 10px;
-            color: #ff0000;
-            text-transform: uppercase;
+            font-size: 20px;
             font-weight: bold;
+            text-transform: uppercase;
+            z-index: 0;
+            animation: glow 2s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            pointer-events: none;
+        }
+        .pepe-computer {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            z-index: 0;
+            animation: glow 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .terry {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            z-index: 0;
+            animation: glow 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .itoddler {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            z-index: 0;
+            animation: glow 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .spinning-disk {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            z-index: 0;
+            animation: glow 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+        audio {
+            display: none;
+        }
+        @keyframes glow {
+            0% { filter: drop-shadow(0 0 10px #ff00ff); color: #ff00ff; text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; }
+            25% { filter: drop-shadow(0 0 10px #00ffff); color: #00ffff; text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; }
+            50% { filter: drop-shadow(0 0 10px #00ff00); color: #00ff00; text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
+            75% { filter: drop-shadow(0 0 10px #ff0000); color: #ff0000; text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+            100% { filter: drop-shadow(0 0 10px #ff00ff); color: #ff00ff; text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; }
         }
         @media (max-width: 520px) {
             .section1 {
@@ -92,69 +141,289 @@
             .section1 img {
                 margin: 0 auto 10px;
             }
+            .neon-text {
+                font-size: 14px;
+            }
+            .pepe-computer, .terry, .itoddler, .spinning-disk {
+                width: 30px;
+                height: 30px;
+            }
         }
     </style>
 </head>
 <body>
+    <canvas id="binaryCanvas"></canvas>
+    <div id="neonContainer"></div>
     <div class="container">
         <h1>/// GRANT CHODEK \\\</h1>
-
         <div class="section1">
             <img src="picture.png" alt="picture">
             <div class="info">
-                <p>PERSONAL STATEMENT: I don't use social media. If you *need* to get in touch with me, send an email to the address listed below. Please include your name and the reason for your email ─ Don't expect a response if both of these conditions are not met. </p>
-                <P id="name">- Grant</P>
+                <p>Hello. I don't use social media, so if you *need* to get in touch with me, send an email to the address listed below. Please include your name and the reason for your email ─ Don't expect a response if both of these conditions are not met.</p>
+                <p id="name">- Grant</p>
             </div>
         </div>
-
         <div class="section2">
             <p>AGE: <span id="age">26</span></p>
-            <p>LOCATION: ████████, USA 🇺🇸</p>
-            <p>OCCUPATION: ████████</p>
-            <p>EMPLOYER: ████████</p>
-            <p>EDUCATION: ████████</p>
-            <p>MARITAL STATUS: ████████</p>
-            <p>INTERESTS: ████████, ████████, ████████</p>
-            <p>HOBBIES: ████████, ████████, ████████, ████████</p>
-            <p>ZODIAC SIGN: ████████</p>
-            <p>PERSONALITY TYPE: ████████</p>
-            <p>MOTHER'S MAIDEN NAME: ████████</p>
-            <p>FATHER'S MIDDLE NAME: ████████</p>
-            <P>BIRTH CITY: ████████</P>
-            <p>NAME OF FIRST PET: ████████</p>
-            <P>HIGH SCHOOL MASCOT: ████████</P>
-            <P>CHILDHOOD HOME STREET ADDRESS: ████████</P>
-            <p>BANK ROUTING AND ACCOUNT NUMBERS: ████████, ████████</p>
-            <p>SOCIAL SECURITY NUMBER: ███-██-████</p>
+            <p>LOCATION: 🇺🇸</p>
+            <p>OCCUPATION: Technologist</p>
         </div>
-
         <div class="section2">
             <p>VERY IMPORTANT INFORMATION: <a href="link.html" style="color: #ff0000">CLICK HERE</a></p>
         </div>
-
         <div class="section3">
             <p>EMAIL ADDRESS: CONTACT@CHODE.XYZ</p>
-            <p><em>"Everything's computer."</em></p>
         </div>
     </div>
+    <audio autoplay loop>
+        <source src="/aud.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
     <script>
+        // age update script
         function updateAge() {
-            const birthday = new Date('1998-07-27'); 
+            const birthday = new Date('1998-07-27');
             const today = new Date();
             let age = today.getFullYear() - birthday.getFullYear();
             const monthDiff = today.getMonth() - birthday.getMonth();
             const dayDiff = today.getDate() - birthday.getDate();
-
             if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
                 age--;
             }
-
             document.getElementById('age').textContent = age;
         }
-
         updateAge();
-        setInterval(updateAge, 86400000); 
+        setInterval(updateAge, 86400000);
+
+        // canvas / animation setup
+        const canvas = document.getElementById('binaryCanvas');
+        const ctx = canvas.getContext('2d');
+        const neonContainer = document.getElementById('neonContainer');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            // recalculate columns on resize
+            drops.length = 0;
+            for (let i = 0; i < Math.floor(canvas.width / fontSize); i++) {
+                drops[i] = Math.random() * canvas.height;
+            }
+        });
+
+        // binary background 
+        const binaryChars = ['0', '1'];
+        const fontSize = 20;
+        const columns = Math.floor(canvas.width / fontSize);
+        const drops = [];
+
+        for (let i = 0; i < columns; i++) {
+            drops[i] = Math.random() * canvas.height;
+        }
+
+        // neon text 
+        const textCount = 10;
+        const texts = [];
+        const maxSpeed = 2;
+
+        for (let i = 0; i < textCount; i++) {
+            const textElement = document.createElement('div');
+            textElement.className = 'neon-text';
+            textElement.textContent = "EVERYTHING'S COMPUTER";
+            textElement.style.left = Math.random() * 100 + '%';
+            textElement.style.top = Math.random() * 100 + '%';
+            neonContainer.appendChild(textElement);
+
+            texts.push({
+                element: textElement,
+                x: parseFloat(textElement.style.left) * canvas.width / 100,
+                y: parseFloat(textElement.style.top) * canvas.height / 100,
+                vx: (Math.random() - 0.5) * maxSpeed * 1.5,
+                vy: (Math.random() - 0.5) * maxSpeed * 1.5
+            });
+        }
+
+        // pepe 
+        const pepeCount = 5;
+        const pepes = [];
+
+        for (let i = 0; i < pepeCount; i++) {
+            const pepeElement = document.createElement('img');
+            pepeElement.className = 'pepe-computer';
+            pepeElement.src = '/typing-pepe-the-frog.gif';
+            pepeElement.style.left = Math.random() * 100 + '%';
+            pepeElement.style.top = Math.random() * 100 + '%';
+            neonContainer.appendChild(pepeElement);
+
+            pepes.push({
+                element: pepeElement,
+                x: parseFloat(pepeElement.style.left) * canvas.width / 100,
+                y: parseFloat(pepeElement.style.top) * canvas.height / 100,
+                vx: (Math.random() - 0.5) * maxSpeed * 1.5,
+                vy: (Math.random() - 0.5) * maxSpeed * 1.5
+            });
+        }
+
+        // terry 
+        const terryCount = 5;
+        const terrys = [];
+
+        for (let i = 0; i < terryCount; i++) {
+            const terryElement = document.createElement('img');
+            terryElement.className = 'terry';
+            terryElement.src = '/terry-a-davis-terry-davis.gif';
+            terryElement.style.left = Math.random() * 100 + '%';
+            terryElement.style.top = Math.random() * 100 + '%';
+            neonContainer.appendChild(terryElement);
+
+            terrys.push({
+                element: terryElement,
+                x: parseFloat(terryElement.style.left) * canvas.width / 100,
+                y: parseFloat(terryElement.style.top) * canvas.height / 100,
+                vx: (Math.random() - 0.5) * maxSpeed * 1.5,
+                vy: (Math.random() - 0.5) * maxSpeed * 1.5
+            });
+        }
+
+        // itoddler 
+        const itoddlerCount = 5;
+        const itoddlers = [];
+
+        for (let i = 0; i < itoddlerCount; i++) {
+            const itoddlerElement = document.createElement('img');
+            itoddlerElement.className = 'itoddler';
+            itoddlerElement.src = '/450px-Itoddlers-btfo.gif';
+            itoddlerElement.style.left = Math.random() * 100 + '%';
+            itoddlerElement.style.top = Math.random() * 100 + '%';
+            neonContainer.appendChild(itoddlerElement);
+
+            itoddlers.push({
+                element: itoddlerElement,
+                x: parseFloat(itoddlerElement.style.left) * canvas.width / 100,
+                y: parseFloat(itoddlerElement.style.top) * canvas.height / 100,
+                vx: (Math.random() - 0.5) * maxSpeed * 1.5,
+                vy: (Math.random() - 0.5) * maxSpeed * 1.5
+            });
+        }
+
+        // spinning disk 
+        const diskCount = 5;
+        const disks = [];
+
+        for (let i = 0; i < diskCount; i++) {
+            const diskElement = document.createElement('img');
+            diskElement.className = 'spinning-disk';
+            diskElement.src = '/5RT9.gif';
+            diskElement.style.left = Math.random() * 100 + '%';
+            diskElement.style.top = Math.random() * 100 + '%';
+            neonContainer.appendChild(diskElement);
+
+            disks.push({
+                element: diskElement,
+                x: parseFloat(diskElement.style.left) * canvas.width / 100,
+                y: parseFloat(diskElement.style.top) * canvas.height / 100,
+                vx: (Math.random() - 0.5) * maxSpeed * 1.5,
+                vy: (Math.random() - 0.5) * maxSpeed * 1.5
+            });
+        }
+
+        function animate() {
+            // slower fade effect for better visibility
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; 
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // binary digits
+            ctx.font = `${fontSize}px Courier New`;
+            ctx.fillStyle = '#00ff00'; // Green color
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = binaryChars[Math.floor(Math.random() * binaryChars.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                // move drops down, reset randomly for flickering effect
+                drops[i] += 1;
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+            }
+
+            // animate neon texts
+            texts.forEach(text => {
+                text.x += text.vx;
+                text.y += text.vy;
+
+                if (text.x > canvas.width) text.x = 0;
+                if (text.x < 0) text.x = canvas.width;
+                if (text.y > canvas.height) text.y = 0;
+                if (text.y < 0) text.y = canvas.height;
+
+                text.element.style.left = (text.x / canvas.width * 100) + '%';
+                text.element.style.top = (text.y / canvas.height * 100) + '%';
+            });
+
+            // animate pepes
+            pepes.forEach(pepe => {
+                pepe.x += pepe.vx;
+                pepe.y += pepe.vy;
+
+                if (pepe.x > canvas.width) pepe.x = 0;
+                if (pepe.x < 0) pepe.x = canvas.width;
+                if (pepe.y > canvas.height) pepe.y = 0;
+                if (pepe.y < 0) pepe.y = canvas.height;
+
+                pepe.element.style.left = (pepe.x / canvas.width * 100) + '%';
+                pepe.element.style.top = (pepe.y / canvas.height * 100) + '%';
+            });
+
+            // animate terrys
+            terrys.forEach(terry => {
+                terry.x += terry.vx;
+                terry.y += terry.vy;
+
+                if (terry.x > canvas.width) terry.x = 0;
+                if (terry.x < 0) terry.x = canvas.width;
+                if (terry.y > canvas.height) terry.y = 0;
+                if (terry.y < 0) terry.y = canvas.height;
+
+                terry.element.style.left = (terry.x / canvas.width * 100) + '%';
+                terry.element.style.top = (terry.y / canvas.height * 100) + '%';
+            });
+
+            // animate itoddlers
+            itoddlers.forEach(itoddler => {
+                itoddler.x += itoddler.vx;
+                itoddler.y += itoddler.vy;
+
+                if (itoddler.x > canvas.width) itoddler.x = 0;
+                if (itoddler.x < 0) itoddler.x = canvas.width;
+                if (itoddler.y > canvas.height) itoddler.y = 0;
+                if (itoddler.y < 0) itoddler.y = canvas.height;
+
+                itoddler.element.style.left = (itoddler.x / canvas.width * 100) + '%';
+                itoddler.element.style.top = (itoddler.y / canvas.height * 100) + '%';
+            });
+
+            // animate disks 
+            disks.forEach(disk => {
+                disk.x += disk.vx;
+                disk.y += disk.vy;
+
+                if (disk.x > canvas.width) disk.x = 0;
+                if (disk.x < 0) disk.x = canvas.width;
+                if (disk.y > canvas.height) disk.y = 0;
+                if (disk.y < 0) disk.y = canvas.height;
+
+                disk.element.style.left = (disk.x / canvas.width * 100) + '%';
+                disk.element.style.top = (disk.y / canvas.height * 100) + '%';
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
     </script>
 </body>
 </html>

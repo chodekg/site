@@ -81,6 +81,9 @@
             padding: 12px;
             border-top: 3px solid #000;
         }
+        .section4 {
+            text-align: center;
+        }
         .neon-text {
             position: absolute;
             font-size: 20px;
@@ -157,45 +160,27 @@
     <div class="container">
         <h1>>>> GRANT CHODEK >>></h1>
         <div class="section1">
-            <img src="picture.png" alt="picture">
+            <img src="/media/picture.png" alt="picture">
             <div class="info">
-                <p>Hello. I don't use social media, so if you *need* to get in touch with me, send an email to the address listed below. Please include your name and the reason for your email ─ Don't expect a response if both of these conditions are not met.</p>
+                <p>Yo. I don't use social media, so if you *need* to get in touch with me, send an email to the address listed below. Please include your name and the reason for your email ─ Don't expect a response if both of these conditions are not met.</p>
                 <p id="name">- Grant</p>
             </div>
         </div>
-        <div class="section2">
-            <p>AGE: <span id="age">26</span></p>
-            <p>LOCATION: 🇺🇸</p>
-            <p>OCCUPATION: Technologist, programmer, among other things</p>
-        </div>
-        <div class="section2">
-            <p>VERY IMPORTANT INFORMATION: <a href="link.html" style="color: #ff0000">CLICK HERE</a></p>
+        <div class="section4">
+                <p><a href="about.html" style="color: #ff0000">AB00T ME</a></p>
+                <p><a href="books.html" style="color: #ff0000">FAVOÜRITES</a></p>
+                <p><a href="link.html" style="color: #ff0000">‼️ VERY IMPORTANT INFORMATION ‼️</a></p>
         </div>
         <div class="section3">
             <p>EMAIL ADDRESS: CONTACT@CHODE.XYZ</p>
         </div>
     </div>
     <audio autoplay loop>
-        <source src="/aud.mp3" type="audio/mp3">
+        <source src="/media/aud.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
     <script>
-        // age update script
-        function updateAge() {
-            const birthday = new Date('1998-07-27');
-            const today = new Date();
-            let age = today.getFullYear() - birthday.getFullYear();
-            const monthDiff = today.getMonth() - birthday.getMonth();
-            const dayDiff = today.getDate() - birthday.getDate();
-            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-                age--;
-            }
-            document.getElementById('age').textContent = age;
-        }
-        updateAge();
-        setInterval(updateAge, 86400000);
-
         // canvas / animation setup
         const canvas = document.getElementById('binaryCanvas');
         const ctx = canvas.getContext('2d');
@@ -253,7 +238,7 @@
         for (let i = 0; i < pepeCount; i++) {
             const pepeElement = document.createElement('img');
             pepeElement.className = 'pepe-computer';
-            pepeElement.src = '/typing-pepe-the-frog.gif';
+            pepeElement.src = '/media/typing-pepe-the-frog.gif';
             pepeElement.style.left = Math.random() * 100 + '%';
             pepeElement.style.top = Math.random() * 100 + '%';
             neonContainer.appendChild(pepeElement);
@@ -274,7 +259,7 @@
         for (let i = 0; i < terryCount; i++) {
             const terryElement = document.createElement('img');
             terryElement.className = 'terry';
-            terryElement.src = '/terry-a-davis-terry-davis.gif';
+            terryElement.src = '/media/terry-a-davis-terry-davis.gif';
             terryElement.style.left = Math.random() * 100 + '%';
             terryElement.style.top = Math.random() * 100 + '%';
             neonContainer.appendChild(terryElement);
@@ -295,7 +280,7 @@
         for (let i = 0; i < itoddlerCount; i++) {
             const itoddlerElement = document.createElement('img');
             itoddlerElement.className = 'itoddler';
-            itoddlerElement.src = '/450px-Itoddlers-btfo.gif';
+            itoddlerElement.src = '/media/450px-Itoddlers-btfo.gif';
             itoddlerElement.style.left = Math.random() * 100 + '%';
             itoddlerElement.style.top = Math.random() * 100 + '%';
             neonContainer.appendChild(itoddlerElement);
@@ -316,7 +301,7 @@
         for (let i = 0; i < diskCount; i++) {
             const diskElement = document.createElement('img');
             diskElement.className = 'spinning-disk';
-            diskElement.src = '/5RT9.gif';
+            diskElement.src = '/media/5RT9.gif';
             diskElement.style.left = Math.random() * 100 + '%';
             diskElement.style.top = Math.random() * 100 + '%';
             neonContainer.appendChild(diskElement);

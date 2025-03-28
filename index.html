@@ -16,12 +16,12 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #000; 
-            color: #fff; 
+            background-color: #000;
+            color: #fff;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between; 
+            justify-content: space-between;
             min-height: 100vh;
             padding: 20px;
         }
@@ -29,37 +29,419 @@
         .container {
             max-width: 1200px;
             width: 100%;
-            flex-grow: 1; 
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center; 
-            align-items: center; 
+            justify-content: center;
+            align-items: center;
         }
 
         .centerpiece-image {
-            max-width: 50%; 
+            max-width: 50%;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); 
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
             margin-bottom: 30px;
-            display: block; 
+            display: block;
         }
 
         .quote {
-            font-family: 'Playfair Display', serif; 
-            font-size: 1.8rem; 
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
             color: #fff;
             line-height: 1.4;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1);
-            text-align: center; 
+            text-align: center;
+        }
+
+        .morse-dot {
+            width: 10px;
+            height: 10px;
+            background-color: transparent;
+            border-radius: 50%;
+            margin-top: 10px;
+            animation: morseFlicker 53.2s infinite;
+        }
+
+        @keyframes morseFlicker {
+            0% { background-color: #fff; }
+            0.38% { background-color: #fff; }
+            0.39% { background-color: transparent; }
+            0.75% { background-color: transparent; }
+            0.76% { background-color: #fff; }
+            1.13% { background-color: #fff; }
+            1.14% { background-color: transparent; }
+            1.50% { background-color: transparent; }
+            1.51% { background-color: #fff; }
+            2.63% { background-color: #fff; }
+            2.64% { background-color: transparent; }
+            3.38% { background-color: transparent; }
+            6.02% { background-color: transparent; }
+            6.03% { background-color: #fff; }
+            6.39% { background-color: #fff; }
+            6.40% { background-color: transparent; }
+            7.14% { background-color: transparent; }
+            7.15% { background-color: #fff; }
+            7.52% { background-color: #fff; }
+            7.53% { background-color: transparent; }
+            7.89% { background-color: transparent; }
+            7.90% { background-color: #fff; }
+            8.27% { background-color: #fff; }
+            8.28% { background-color: transparent; }
+            9.02% { background-color: transparent; }
+            9.03% { background-color: #fff; }
+            9.40% { background-color: #fff; }
+            9.41% { background-color: transparent; }
+            9.77% { background-color: transparent; }
+            9.78% { background-color: #fff; }
+            10.15% { background-color: #fff; }
+            10.16% { background-color: transparent; }
+            10.90% { background-color: transparent; }
+            10.91% { background-color: #fff; }
+            11.28% { background-color: #fff; }
+            11.29% { background-color: transparent; }
+            11.65% { background-color: transparent; }
+            11.66% { background-color: #fff; }
+            12.03% { background-color: #fff; }
+            12.04% { background-color: transparent; }
+            12.78% { background-color: transparent; }
+            12.79% { background-color: #fff; }
+            13.16% { background-color: #fff; }
+            13.17% { background-color: transparent; }
+            13.53% { background-color: transparent; }
+            13.54% { background-color: #fff; }
+            13.91% { background-color: #fff; }
+            13.92% { background-color: transparent; }
+            14.66% { background-color: transparent; }
+            14.67% { background-color: #fff; }
+            15.04% { background-color: #fff; }
+            15.05% { background-color: transparent; }
+            15.79% { background-color: transparent; }
+            15.80% { background-color: #fff; }
+            16.17% { background-color: #fff; }
+            16.18% { background-color: transparent; }
+            16.54% { background-color: transparent; }
+            16.55% { background-color: #fff; }
+            16.92% { background-color: #fff; }
+            16.93% { background-color: transparent; }
+            17.67% { background-color: transparent; }
+            20.30% { background-color: transparent; }
+            20.31% { background-color: #fff; }
+            21.43% { background-color: #fff; }
+            21.44% { background-color: transparent; }
+            22.18% { background-color: transparent; }
+            22.19% { background-color: #fff; }
+            22.56% { background-color: #fff; }
+            22.57% { background-color: transparent; }
+            22.93% { background-color: transparent; }
+            22.94% { background-color: #fff; }
+            23.31% { background-color: #fff; }
+            23.32% { background-color: transparent; }
+            24.06% { background-color: transparent; }
+            24.07% { background-color: #fff; }
+            24.44% { background-color: #fff; }
+            24.45% { background-color: transparent; }
+            25.19% { background-color: transparent; }
+            25.20% { background-color: #fff; }
+            25.57% { background-color: #fff; }
+            25.58% { background-color: transparent; }
+            25.94% { background-color: transparent; }
+            25.95% { background-color: #fff; }
+            26.32% { background-color: #fff; }
+            26.33% { background-color: transparent; }
+            27.07% { background-color: transparent; }
+            27.08% { background-color: #fff; }
+            27.45% { background-color: #fff; }
+            27.46% { background-color: transparent; }
+            28.20% { background-color: transparent; }
+            28.21% { background-color: #fff; }
+            28.58% { background-color: #fff; }
+            28.59% { background-color: transparent; }
+            29.33% { background-color: transparent; }
+            29.34% { background-color: #fff; }
+            29.71% { background-color: #fff; }
+            29.72% { background-color: transparent; }
+            30.08% { background-color: transparent; }
+            30.09% { background-color: #fff; }
+            30.46% { background-color: #fff; }
+            30.47% { background-color: transparent; }
+            31.21% { background-color: transparent; }
+            31.22% { background-color: #fff; }
+            31.59% { background-color: #fff; }
+            31.60% { background-color: transparent; }
+            31.96% { background-color: transparent; }
+            31.97% { background-color: #fff; }
+            32.34% { background-color: #fff; }
+            32.35% { background-color: transparent; }
+            33.09% { background-color: transparent; }
+            33.10% { background-color: #fff; }
+            33.47% { background-color: #fff; }
+            33.48% { background-color: transparent; }
+            33.84% { background-color: transparent; }
+            33.85% { background-color: #fff; }
+            34.22% { background-color: #fff; }
+            34.23% { background-color: transparent; }
+            34.97% { background-color: transparent; }
+            34.98% { background-color: #fff; }
+            35.35% { background-color: #fff; }
+            35.36% { background-color: transparent; }
+            36.10% { background-color: transparent; }
+            36.11% { background-color: #fff; }
+            36.48% { background-color: #fff; }
+            36.49% { background-color: transparent; }
+            37.23% { background-color: transparent; }
+            37.24% { background-color: #fff; }
+            37.61% { background-color: #fff; }
+            37.62% { background-color: transparent; }
+            37.98% { background-color: transparent; }
+            37.99% { background-color: #fff; }
+            38.36% { background-color: #fff; }
+            38.37% { background-color: transparent; }
+            39.11% { background-color: transparent; }
+            39.12% { background-color: #fff; }
+            39.49% { background-color: #fff; }
+            39.50% { background-color: transparent; }
+            40.24% { background-color: transparent; }
+            40.25% { background-color: #fff; }
+            40.62% { background-color: #fff; }
+            40.63% { background-color: transparent; }
+            40.99% { background-color: transparent; }
+            41.00% { background-color: #fff; }
+            41.37% { background-color: #fff; }
+            41.38% { background-color: transparent; }
+            42.12% { background-color: transparent; }
+            42.13% { background-color: #fff; }
+            42.50% { background-color: #fff; }
+            42.51% { background-color: transparent; }
+            43.25% { background-color: transparent; }
+            43.26% { background-color: #fff; }
+            43.63% { background-color: #fff; }
+            43.64% { background-color: transparent; }
+            44.00% { background-color: transparent; }
+            44.01% { background-color: #fff; }
+            44.38% { background-color: #fff; }
+            44.39% { background-color: transparent; }
+            45.13% { background-color: transparent; }
+            45.14% { background-color: #fff; }
+            45.51% { background-color: #fff; }
+            45.52% { background-color: transparent; }
+            46.26% { background-color: transparent; }
+            46.27% { background-color: #fff; }
+            46.64% { background-color: #fff; }
+            46.65% { background-color: transparent; }
+            47.01% { background-color: transparent; }
+            47.02% { background-color: #fff; }
+            47.39% { background-color: #fff; }
+            47.40% { background-color: transparent; }
+            48.14% { background-color: transparent; }
+            48.15% { background-color: #fff; }
+            48.52% { background-color: #fff; }
+            48.53% { background-color: transparent; }
+            48.89% { background-color: transparent; }
+            48.90% { background-color: #fff; }
+            49.27% { background-color: #fff; }
+            49.28% { background-color: transparent; }
+            50.02% { background-color: transparent; }
+            50.03% { background-color: #fff; }
+            50.40% { background-color: #fff; }
+            50.41% { background-color: transparent; }
+            51.15% { background-color: transparent; }
+            51.16% { background-color: #fff; }
+            51.53% { background-color: #fff; }
+            51.54% { background-color: transparent; }
+            51.90% { background-color: transparent; }
+            51.91% { background-color: #fff; }
+            52.28% { background-color: #fff; }
+            52.29% { background-color: transparent; }
+            53.03% { background-color: transparent; }
+            53.04% { background-color: #fff; }
+            53.41% { background-color: #fff; }
+            53.42% { background-color: transparent; }
+            54.16% { background-color: transparent; }
+            54.17% { background-color: #fff; }
+            54.54% { background-color: #fff; }
+            54.55% { background-color: transparent; }
+            55.29% { background-color: transparent; }
+            55.30% { background-color: #fff; }
+            55.67% { background-color: #fff; }
+            55.68% { background-color: transparent; }
+            56.04% { background-color: #fff; }
+            56.05% { background-color: transparent; }
+            56.79% { background-color: transparent; }
+            56.80% { background-color: #fff; }
+            57.92% { background-color: #fff; }
+            57.93% { background-color: transparent; }
+            58.67% { background-color: transparent; }
+            58.68% { background-color: #fff; }
+            59.05% { background-color: #fff; }
+            59.06% { background-color: transparent; }
+            59.42% { background-color: transparent; }
+            59.43% { background-color: #fff; }
+            59.80% { background-color: #fff; }
+            59.81% { background-color: transparent; }
+            60.55% { background-color: transparent; }
+            60.56% { background-color: #fff; }
+            60.93% { background-color: #fff; }
+            60.94% { background-color: transparent; }
+            61.30% { background-color: transparent; }
+            61.31% { background-color: #fff; }
+            61.68% { background-color: #fff; }
+            61.69% { background-color: transparent; }
+            62.43% { background-color: transparent; }
+            62.44% { background-color: #fff; }
+            63.56% { background-color: #fff; }
+            63.57% { background-color: transparent; }
+            64.31% { background-color: transparent; }
+            64.32% { background-color: #fff; }
+            64.69% { background-color: #fff; }
+            64.70% { background-color: transparent; }
+            65.06% { background-color: transparent; }
+            65.07% { background-color: #fff; }
+            65.44% { background-color: #fff; }
+            65.45% { background-color: transparent; }
+            66.19% { background-color: transparent; }
+            66.20% { background-color: #fff; }
+            66.57% { background-color: #fff; }
+            66.58% { background-color: transparent; }
+            66.94% { background-color: transparent; }
+            66.95% { background-color: #fff; }
+            67.32% { background-color: #fff; }
+            67.33% { background-color: transparent; }
+            68.07% { background-color: transparent; }
+            68.08% { background-color: #fff; }
+            68.45% { background-color: #fff; }
+            68.46% { background-color: transparent; }
+            69.20% { background-color: transparent; }
+            69.21% { background-color: #fff; }
+            69.58% { background-color: #fff; }
+            69.59% { background-color: transparent; }
+            69.95% { background-color: transparent; }
+            69.96% { background-color: #fff; }
+            70.33% { background-color: #fff; }
+            70.34% { background-color: transparent; }
+            71.08% { background-color: transparent; }
+            71.09% { background-color: #fff; }
+            71.46% { background-color: #fff; }
+            71.47% { background-color: transparent; }
+            72.21% { background-color: transparent; }
+            72.22% { background-color: #fff; }
+            72.59% { background-color: #fff; }
+            72.60% { background-color: transparent; }
+            72.96% { background-color: transparent; }
+            72.97% { background-color: #fff; }
+            73.34% { background-color: #fff; }
+            73.35% { background-color: transparent; }
+            74.09% { background-color: transparent; }
+            74.10% { background-color: #fff; }
+            74.47% { background-color: #fff; }
+            74.48% { background-color: transparent; }
+            75.22% { background-color: transparent; }
+            75.23% { background-color: #fff; }
+            75.60% { background-color: #fff; }
+            75.61% { background-color: transparent; }
+            75.97% { background-color: transparent; }
+            75.98% { background-color: #fff; }
+            76.35% { background-color: #fff; }
+            76.36% { background-color: transparent; }
+            77.10% { background-color: transparent; }
+            77.11% { background-color: #fff; }
+            77.48% { background-color: #fff; }
+            77.49% { background-color: transparent; }
+            78.23% { background-color: transparent; }
+            78.24% { background-color: #fff; }
+            78.61% { background-color: #fff; }
+            78.62% { background-color: transparent; }
+            78.98% { background-color: transparent; }
+            78.99% { background-color: #fff; }
+            79.36% { background-color: #fff; }
+            79.37% { background-color: transparent; }
+            80.11% { background-color: transparent; }
+            80.12% { background-color: #fff; }
+            80.49% { background-color: #fff; }
+            80.50% { background-color: transparent; }
+            81.24% { background-color: transparent; }
+            81.25% { background-color: #fff; }
+            81.62% { background-color: #fff; }
+            81.63% { background-color: transparent; }
+            81.99% { background-color: transparent; }
+            82.00% { background-color: #fff; }
+            82.37% { background-color: #fff; }
+            82.38% { background-color: transparent; }
+            83.12% { background-color: transparent; }
+            83.13% { background-color: #fff; }
+            83.50% { background-color: #fff; }
+            83.51% { background-color: transparent; }
+            84.25% { background-color: transparent; }
+            84.26% { background-color: #fff; }
+            84.63% { background-color: #fff; }
+            84.64% { background-color: transparent; }
+            85.00% { background-color: transparent; }
+            85.01% { background-color: #fff; }
+            85.38% { background-color: #fff; }
+            85.39% { background-color: transparent; }
+            86.13% { background-color: transparent; }
+            86.14% { background-color: #fff; }
+            86.51% { background-color: #fff; }
+            86.52% { background-color: transparent; }
+            86.88% { background-color: transparent; }
+            86.89% { background-color: #fff; }
+            87.26% { background-color: #fff; }
+            87.27% { background-color: transparent; }
+            88.01% { background-color: transparent; }
+            88.02% { background-color: #fff; }
+            88.39% { background-color: #fff; }
+            88.40% { background-color: transparent; }
+            89.14% { background-color: transparent; }
+            89.15% { background-color: #fff; }
+            89.52% { background-color: #fff; }
+            89.53% { background-color: transparent; }
+            90.27% { background-color: transparent; }
+            90.28% { background-color: #fff; }
+            90.65% { background-color: #fff; }
+            90.66% { background-color: transparent; }
+            91.40% { background-color: transparent; }
+            91.41% { background-color: #fff; }
+            91.78% { background-color: #fff; }
+            91.79% { background-color: transparent; }
+            92.15% { background-color: transparent; }
+            92.16% { background-color: #fff; }
+            92.53% { background-color: #fff; }
+            92.54% { background-color: transparent; }
+            93.28% { background-color: transparent; }
+            93.29% { background-color: #fff; }
+            93.66% { background-color: #fff; }
+            93.67% { background-color: transparent; }
+            94.41% { background-color: transparent; }
+            94.42% { background-color: #fff; }
+            94.79% { background-color: #fff; }
+            94.80% { background-color: transparent; }
+            95.16% { background-color: transparent; }
+            95.17% { background-color: #fff; }
+            95.54% { background-color: #fff; }
+            95.55% { background-color: transparent; }
+            96.29% { background-color: transparent; }
+            96.30% { background-color: #fff; }
+            96.67% { background-color: #fff; }
+            96.68% { background-color: transparent; }
+            97.42% { background-color: transparent; }
+            97.43% { background-color: #fff; }
+            97.80% { background-color: #fff; }
+            97.81% { background-color: transparent; }
+            98.17% { background-color: transparent; }
+            98.18% { background-color: #fff; }
+            98.55% { background-color: #fff; }
+            98.56% { background-color: transparent; }
+            99.30% { background-color: transparent; }
+            99.31% { background-color: #fff; }
+            100% { background-color: transparent; }
         }
 
         .email {
             font-family: 'Arial', sans-serif;
             font-size: 0.8rem;
             color: #ccc;
-            padding-bottom: 10px; 
+            padding-bottom: 10px;
         }
 
         @media (max-width: 768px) {
@@ -68,7 +450,7 @@
             }
 
             .centerpiece-image {
-                max-width: 50%; 
+                max-width: 50%;
                 margin-bottom: 20px;
             }
         }
@@ -79,12 +461,17 @@
             }
 
             .centerpiece-image {
-                max-width: 50%; 
+                max-width: 50%;
                 margin-bottom: 15px;
             }
 
             .email {
                 font-size: 0.7rem;
+            }
+
+            .morse-dot {
+                width: 8px;
+                height: 8px;
             }
         }
     </style>
@@ -92,8 +479,9 @@
 </head>
 <body>
     <div class="container">
-        <img src="pic.webp" alt="Tree with digital glitch effect" class="centerpiece-image">
+        <img src="pic.webp" alt="pic" class="centerpiece-image">
         <p class="quote">Biological life was merely a prelude.</p>
+        <span class="morse-dot"></span>
     </div>
     <p class="email">contact@chode.xyz</p>
 </body>
